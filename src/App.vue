@@ -26,5 +26,17 @@ export default {
 
 <style lang='scss'>
 @use './scss/main.scss' as *;
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Bai+Jamjuree');
+
+body{
+  color: white;
+  background-color: rgb(37, 32, 32);
+
+  .debug{
+    border: 1px dashed blue;
+  }
+
+}
 
 </style>
