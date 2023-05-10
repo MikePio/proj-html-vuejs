@@ -90,6 +90,7 @@ export default {
       height: 56px;
       border: 2px solid #fff;;
       margin: 0 39px;
+      cursor: pointer;
     }
 
     & i {

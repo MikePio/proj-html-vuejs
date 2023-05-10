@@ -1,14 +1,12 @@
 <script>
 import { store } from "./data/store"
-import Header from './components/Header.vue'
 import Main from './components/Main.vue'
 import Footer from './components/Footer.vue'
-import Jumbotron from './components/partials/Jumbotron.vue'
+import HeaderAndJumbo from './components/HeaderAndJumbo.vue'
 export default {
   name: 'App',
   components:{
-    Header,
-    Jumbotron,
+    HeaderAndJumbo,
     Main,
     Footer
   },
@@ -21,8 +19,7 @@ export default {
 </script>
 
 <template>
-  <Header/>
-  <Jumbotron/>
+  <HeaderAndJumbo/>
   <Main/>
   <Footer/>
 </template>
@@ -34,13 +31,13 @@ export default {
 
 body{
   color: white;
-  background-color: rgb(37, 32, 32);
+  background-color: $primary-color;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  .debug{
+.debug{
     border: 1px dashed blue;
   }
 

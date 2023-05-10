@@ -43,6 +43,8 @@ export default {
 
 header{
   // height: 296px;
+  // height: 82px;
+
 
   .container-header{
     padding: 0px 33px;
@@ -55,6 +57,7 @@ header{
       // width: 120px;
       height: 19px;
       filter: invert(32%) sepia(95%) saturate(6840%) hue-rotate(345deg) brightness(109%) contrast(95%);
+      cursor: pointer;
     }
   }
 
