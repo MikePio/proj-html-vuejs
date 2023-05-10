@@ -11,7 +11,8 @@ export default {
 </script>
 
 <template>
-  <header class="d-flex col align-items-center justify-content-center">
+  <!-- <header class="debug d-flex col align-items-center justify-content-center"> -->
+  <header class="debug d-flex col align-items-start  justify-content-center">
     <div class=" container-header w-100 d-flex justify-content-between align-items-center">
       <!-- logo -->
       <div class=" row-logo row align-items-center">
@@ -32,6 +33,7 @@ export default {
 
     </div>
   </header>
+
 </template>
 
 <style lang="scss" scoped>
@@ -40,6 +42,7 @@ export default {
 
 
 header{
+  height: 296px;
 
   .container-header{
     padding: 0px 33px;
@@ -68,7 +71,7 @@ header{
       align-items: center;
       justify-content: center;
       // height: 120px;
-      min-height: 82px;
+      height: 82px;
       margin: 0 20px;
       font-size: 15px;
       font-family: 'Montserrat', sans-serif;
@@ -114,10 +117,6 @@ header{
     }
 
   }
-
-
-
-
 }
 
 </style>
