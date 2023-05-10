@@ -27,12 +27,14 @@ export default {
       <!-- <div class="right"></div> -->
       <!-- <img src="public/images/portrait-of-young-architect-woman-on-meeting-KFZCE3A.jpg" alt="img-background"> -->
     <!-- </div> -->
-    <div class="background">
+
+    <!-- <div class="background">
       <div class="left"></div>
       <div class="right"></div>
-    </div>
+    </div> -->
       <Header/>
       <Jumbotron/>
+
     <!-- <div class="background">
       <Header/>
       <Jumbotron/>

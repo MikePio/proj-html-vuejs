@@ -19,9 +19,15 @@ export default {
 </script>
 
 <template>
+<div class="backgrounds-header-jumbo">
+  <div class="left"></div>
+  <div class="right"></div>
+</div>
+<div class="body-container d-flex flex-column align-items-center justify-content-center">
   <HeaderAndJumbo/>
   <Main/>
   <Footer/>
+</div>
 </template>
 
 <style lang='scss'>
@@ -32,10 +38,46 @@ export default {
 body{
   color: white;
   background-color: $primary-color;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  .backgrounds-header-jumbo{
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    width: 100%;
+    // width: 100vw;
+    // height: 100vh;
+    //*somma dell'altezza del jumbotron e del header
+    height: 947px;
+  }
+
+  .left {
+  background-color: $primary-color;
+  // // position: relative;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  background-size: cover;
+  // width: 28%;
+  // width: 29.5%;
+  width: 28vw;
+  // width: 448px;
+  height: 100%;
+}
+
+.right {
+  background-image: url("public/images/portrait-of-young-architect-woman-on-meeting-KFZCE3A.jpg");
+  background-size: cover;
+  // background-position: center;
+  // width: 72%;
+  // width: 70.5%;
+  width: 72vw;
+  // width: 1071px;
+  height: 100%;
+}
+  
 
 .debug{
     border: 1px dashed blue;
