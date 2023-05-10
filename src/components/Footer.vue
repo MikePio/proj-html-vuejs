@@ -12,7 +12,7 @@ export default {
 
 <template>
   <footer>
-    <h1>test</h1>
+    <h1>Footer</h1>
   </footer>
 </template>
 
