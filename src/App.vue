@@ -35,9 +35,18 @@ export default {
 body{
   color: white;
   background-color: rgb(37, 32, 32);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   .debug{
     border: 1px dashed blue;
+  }
+
+  header, main, footer{
+    // max-width: 1520px;
+    width: 1519px;
   }
 
 }

@@ -11,7 +11,8 @@ export default {
 </script>
 
 <template>
-  <section class="debug jumbotron-mp">
+  <!-- <section class="debug jumbotron-mp"> -->
+  <section class="debug jumbotron-mp d-flex flex-column justify-content-center">
     <!-- per fare la linea di lato usa ::before in css -->
     <h2 class="little-title">ALWATS THE BEST WAY YOU NEED IT</h2>
     <h1 class="big-title">THE BEST <br>BUSINESS <br>CONSULTING</h1>
@@ -31,7 +32,9 @@ export default {
 
 //*JUMBOTRON
 .jumbotron-mp{
-  height: calc(100vh - 82px);
+  // height: calc(100vh - 82px);
+  // height: 825px;
+  height: 845px;
   padding: 0px 33px;
 
   .little-title{
@@ -40,7 +43,8 @@ export default {
     font-weight: 400;
     letter-spacing: 2.8px;
     // margin: 0 0 15px 23px;
-    margin: 0 0 15px 72px;
+    // margin: 0 0 15px 72px;
+    margin: 0 0 -5px 72px;
     position: relative;
     &::before{
       content: "";
@@ -81,7 +85,6 @@ export default {
     }
 
     .play-icon {
-      // background-color: #e0e0e0;
       border-radius: 50%;
       width: 56px;
       height: 56px;

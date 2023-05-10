@@ -42,7 +42,7 @@ export default {
 
 
 header{
-  height: 296px;
+  // height: 296px;
 
   .container-header{
     padding: 0px 33px;
