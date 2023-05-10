@@ -44,6 +44,7 @@ export default {
 header{
   // height: 296px;
   // height: 82px;
+  // width: 100%;
 
 
   .container-header{

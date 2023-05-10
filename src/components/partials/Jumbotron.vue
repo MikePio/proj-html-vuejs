@@ -36,6 +36,7 @@ export default {
   // height: 825px;
   height: 845px;
   padding: 0px 33px;
+  // width: 100%;
 
   .little-title{
     font-family: montserrat,Sans-serif;
