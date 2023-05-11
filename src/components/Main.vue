@@ -1,9 +1,12 @@
 <script>
 import ConsultationSection from '../components/partials/main-sections/ConsultationSection.vue'
+import AboutUsSection from '../components/partials/main-sections/AboutUsSection.vue'
+
 export default {
   name: 'Main',
   components:{
-    ConsultationSection
+    ConsultationSection,
+    AboutUsSection
   },
   data(){
     return{
@@ -17,6 +20,7 @@ export default {
 <template>
   <main>
     <ConsultationSection/>
+    <AboutUsSection/>
 
 
 

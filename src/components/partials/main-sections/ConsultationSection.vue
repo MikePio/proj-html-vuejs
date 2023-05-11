@@ -11,7 +11,6 @@ export default {
 </script>
 
 <template>
-<!-- crea div con background bianco e con position -->
   <section class="debug consultation-section d-flex justify-content-end">
     <div class="container-consultation-section">
       <h6>Our consultants can help you</h6>
@@ -54,11 +53,8 @@ export default {
         </div>
       </div>
 
-
     </div>
   </section>
-
-
 
 </template>
 
@@ -118,6 +114,7 @@ export default {
       content: "";
       height: 3px;
       width: 810px;
+      width: 788px;
       margin: 0 0 0 43px;
       background-color: $light-green;
 
@@ -147,29 +144,6 @@ export default {
     }
   }
 
-
-
-
-
-
-
-
-
-
-
-
-  
-
 }
-
-  // linea
-  // position: absolute;
-  //   top: 50%;
-  //   left: 0;
-
-    // height: 3px;
-    // width: 1800px;
-    // margin: 0 0 0 33em;
-    // background-color: $light-green;
 
 </style>

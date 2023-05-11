@@ -35,8 +35,9 @@ export default {
 
 <style lang='scss'>
 @use './scss/main.scss' as *;
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+// @import url('https://fonts.googleapis.com/css?family=Montserrat');
 // @import url('https://fonts.googleapis.com/css?family=Bai+Jamjuree');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300;400;500;600;700&display=swap');
 
 body{
@@ -50,7 +51,7 @@ body{
   min-width: 1519px;
 
   // .debug{
-  //   border: 1px dashed rgb(166, 255, 0);
+  //   border: 0.5px dashed rgb(166, 255, 0);
   // }
 
   //* TUTTI I BACKGROUND /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
