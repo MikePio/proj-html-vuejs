@@ -10,7 +10,8 @@
   // import './style.css';
 
   // import required modules
-  import { Navigation } from 'swiper';
+  // import { Navigation } from 'swiper';
+  import { useSwiper } from 'swiper/vue';
 
 export default {
   name: 'ProjectSection',
@@ -28,8 +29,10 @@ export default {
     }
   },
   setup(){
+    const swiper = useSwiper();
     return {
-      modules: [ Navigation],
+      // modules: [ Navigation],
+      swiper,
     };
   },
   methods: {
@@ -50,8 +53,8 @@ export default {
     <div class="container-mp d-flex justify-content-between">
       <h3 class="title-section">OUR EXPERT TRUSTED CONSULTANTS HELP CLIENTS</h3>
       <div class="container-buttons d-flex justify-content-center">
-        <div class="arrow-left d-flex align-items-center justify-content-center  " ><span>&#x2190;</span></div>
-        <div class="arrow-right d-flex align-items-center justify-content-center " ><span>&#x2192;</span></div>
+        <div class="arrow-left d-flex align-items-center justify-content-center  "  @click="swiper.slidePrev()" ><span>&#x2190;</span></div>
+        <div class="arrow-right d-flex align-items-center justify-content-center "  @click="swiper.slideNext()"><span>&#x2192;</span></div>
       </div>
     </div>
 
@@ -70,10 +73,9 @@ export default {
         <swiper-slide><img src="public\images\z1el4c4p-790x592.jpg" alt="img-slider"></swiper-slide>
 
       <!-- test         -->
-        <!-- <swiper-slide><img src="public\images\z1el4c4p-790x592.jpg" alt="img-slider"></swiper-slide>
+        <swiper-slide><img src="public\images\DRY-1-790x592.jpg" alt="img-slider"></swiper-slide>
+        <swiper-slide><img src="public\images\221bf0b7-8134-43bb-936a-5acbe42db64a-790x592.jpg" alt="img-slider"></swiper-slide>
         <swiper-slide><img src="public\images\z1el4c4p-790x592.jpg" alt="img-slider"></swiper-slide>
-        <swiper-slide><img src="public\images\z1el4c4p-790x592.jpg" alt="img-slider"></swiper-slide>
-        <swiper-slide><img src="public\images\z1el4c4p-790x592.jpg" alt="img-slider"></swiper-slide> -->
       
       </swiper>
 
@@ -87,7 +89,8 @@ export default {
 @use '../../../scss/main.scss' as *;
 
 .project-section{
-  height: 980px;
+  // height: 980px;
+  margin-bottom: 177px;
 
   //name section
   .name-section{
