@@ -63,6 +63,7 @@ body{
   //* TUTTI I COMPONENTS PRINCIPALI /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
   header, .jumbotron-mp, main, footer {
     // max-width: 1520px;
+    // max-width: 1519px;
     // width: 1519px;
     min-width: 1519px;
   }
