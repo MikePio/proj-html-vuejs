@@ -19,4 +19,8 @@ export default {
 <style lang="scss" scoped>
 @use '../scss/main.scss' as *;
 
+footer{
+  height: 305px;
+}
+
 </style>
