@@ -1,9 +1,18 @@
 <script>
+import FooterNav from './partials/FooterNav.vue'
+import { headerLinks } from "../data/header-nav"
+import FooterSocialIcons from './partials/FooterSocialIcons.vue'
+import { socialIcons } from "../data/social-icons"
 export default {
   name: 'Footer',
+  components:{
+    FooterNav,
+    FooterSocialIcons
+  },
   data(){
     return{
-
+      headerLinks,
+      socialIcons
     }
   }
 
@@ -18,21 +27,37 @@ export default {
           <img class="logo-footer" src="public/images/logotype-2-300x50.png" alt="logo-footer">
         <nav>
           <ul class="nav-list d-flex ">
-            <li>Home</li>
+          <!-- //* lista statica -->
+            <!-- <li>Home</li>
             <li>About</li>
             <li>Projects</li>
             <li>Services</li>
             <li>Blog</li>
-            <li>Contact</li>
+            <li>Contact</li> -->
+          <!-- //*lista dinamica CON LE PROPS-->
+            <FooterNav
+              v-for="(headerLink, index) in headerLinks" 
+              :key="index"
+              :link="headerLink.url"
+              :nameLink=" headerLink.name" 
+            />
           </ul>
         </nav>
         <!-- <div class="empty-div"></div> -->
         <nav>
           <ul class="nav-list social-icons d-flex ">
-            <li><i class="fa-brands fa-instagram"></i></li>
+          <!-- //* lista statica -->
+            <!-- <li><i class="fa-brands fa-instagram  "></i></li>
             <li><i class="fa-brands fa-linkedin-in"></i></li>
-            <li><i class="fa-brands fa-facebook-f"></i></li>
-            <li><i class="fa-brands fa-twitter"></i></li>
+            <li><i class="fa-brands fa-facebook-f "></i></li>
+            <li><i class="fa-brands fa-twitter    "></i></li> -->
+          <!-- //*lista dinamica CON LE PROPS-->
+            <FooterSocialIcons
+              v-for="(socialIcon, index) in socialIcons" 
+              :key="index"
+              :linkSocial="socialIcon.url"
+              :nameIcon=" socialIcon.name" 
+            />
           </ul>
         </nav>
       </div>
@@ -101,7 +126,10 @@ footer{
           color: $secondary-color;
         }
       }
-
+      a{
+        text-decoration: none;
+        color: #ffffff;
+      }
     }
     .social-icons li i{
       color: #fff;

@@ -39,13 +39,13 @@ export default {
           <!-- <li v-for="(headerLink, index) in headerLinks" :key="index" >{{ headerLink.name }}</li> -->
           <!-- <li v-for="(headerLink, index) in headerLinks" :key="index"><a :href="`${headerLink.url}`">{{ headerLink.name }}</a></li> -->
           <!-- //*lista dinamica CON LE PROPS-->
-          <!-- <li><a :href="link">{{ nameLink }}</a></li> -->
           <HeaderNav
             v-for="(headerLink, index) in headerLinks" 
             :key="index"
             :link="headerLink.url"
             :nameLink=" headerLink.name" 
             />
+          <!-- <li><a :href="link">{{ nameLink }}</a></li> -->
         </ul>
       </div>
 

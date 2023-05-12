@@ -1,7 +1,5 @@
 <script>
-// import { headerLinks } from "../header-nav"
 import { headerLinks } from "../../data/header-nav"
-// import { headerLinks } from "../data/header-nav.js"
 export default {
   name: 'HeaderNav',
   props:{
