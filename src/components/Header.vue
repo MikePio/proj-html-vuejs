@@ -80,7 +80,7 @@ header{
       font-size: 15px;
       font-family: 'Montserrat', sans-serif;
       position: relative;
-      &{
+      &:hover{
         cursor: pointer;
       }
       &::after{

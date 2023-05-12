@@ -28,6 +28,8 @@ export default {
 .about-work-section{
   height: 460px;
   background-image: url('public/images/business-people-working-together-on-project-and-B3MZ4TX.jpg');
+  background-position: center;
+  margin-bottom: 80px;
   .container-about-work-section{
     width: 100%;
     height: 228px;
