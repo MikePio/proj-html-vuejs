@@ -1,9 +1,10 @@
 <script>
+import { headerLinks } from "../data/header-nav"
 export default {
   name: 'Header',
   data(){
     return{
-
+      headerLinks
     }
   }
 
@@ -22,12 +23,15 @@ export default {
       <!-- nav-list -->
       <div class=" row justify-content-end">
         <ul class="nav-list d-flex ">
-          <li>Home</li>
+        <!-- //* lista statica -->
+          <!-- <li>Home</li>
           <li>About</li>
           <li>Projects</li>
           <li>Services</li>
           <li>Blog</li>
-          <li>Contact</li>
+          <li>Contact</li> -->
+          <!-- //*lista dinamica -->
+          <li v-for="(headerLink, index) in headerLinks" :key="index" >{{ headerLink.name }}</li>
         </ul>
       </div>
 
