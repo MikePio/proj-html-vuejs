@@ -6,6 +6,8 @@ import Jumbotron from './components/Jumbotron.vue'
 import Main from './components/Main.vue'
 import Footer from './components/Footer.vue'
 
+import { headerLinks } from "./data/header-nav"
+
 export default {
   name: 'App',
   components:{
@@ -17,7 +19,8 @@ export default {
   },
   data(){
     return{
-      store
+      store,
+      headerLinks
     }
   }
 }

@@ -1,7 +1,12 @@
 <script>
+// import { headerLinks } from "../../data/header-nav"
 import { headerLinks } from "../data/header-nav"
+import HeaderNav from './partials/HeaderNav.vue'
 export default {
   name: 'Header',
+  components:{
+    HeaderNav
+  },
   data(){
     return{
       headerLinks
@@ -31,7 +36,16 @@ export default {
           <li>Blog</li>
           <li>Contact</li> -->
           <!-- //*lista dinamica -->
-          <li v-for="(headerLink, index) in headerLinks" :key="index" >{{ headerLink.name }}</li>
+          <!-- <li v-for="(headerLink, index) in headerLinks" :key="index" >{{ headerLink.name }}</li> -->
+          <!-- <li v-for="(headerLink, index) in headerLinks" :key="index"><a :href="`${headerLink.url}`">{{ headerLink.name }}</a></li> -->
+          <!-- //*lista dinamica CON LE PROPS-->
+          <!-- <li><a :href="link">{{ nameLink }}</a></li> -->
+          <HeaderNav
+            v-for="(headerLink, index) in headerLinks" 
+            :key="index"
+            :link="headerLink.url"
+            :nameLink=" headerLink.name" 
+            />
         </ul>
       </div>
 
@@ -82,6 +96,7 @@ header{
       height: 82px;
       margin: 0 20px;
       font-size: 15px;
+      font-weight: 200;
       font-family: 'Montserrat', sans-serif;
       position: relative;
       &:hover{
@@ -122,6 +137,10 @@ header{
         // width: 100%;
       }
 
+    }
+    a{
+      text-decoration: none;
+      color: #ffffff;
     }
 
   }
