@@ -115,11 +115,36 @@ export default {
     
     .testimonial-card{
       // width: 33.333%;
-      width: calc((100% - 1.32%) / 3);
+      // width: calc((100% - 1.32%) / 3);
+      width: calc(100% / 3);
       // width: calc(100% - 1.32% / 3);
       // width: calc(100% / 3 - 1.32%);
       height: 385px;
       text-align: left;
+      &:hover{
+        // transition: all 0.3s ease-out;
+        .description-testimonial-card, .name-testimonial-card{
+          color: #ffffff !important;
+          transition: all 0.3s ease-out;
+
+        }
+        .company-testimonial-card{
+          color: #aaa !important;
+          transition: all 0.3s ease-out;
+        }
+      }
+      &:nth-child(1):hover{
+        background-image: url('public/images/oliver-ragfelt-488196-2.jpg');
+        transition: all 0.3s ease-out;
+      }
+      &:nth-child(2):hover{
+        background-image: url('public/images/12679.jpg');
+        transition: all 0.3s ease-out;
+      }
+      &:nth-child(3):hover{
+        background-image: url('public/images/oliver-ragfelt-488196-unsplash.jpg');
+        transition: all 0.3s ease-out;
+      }
 
       .container-testimonial-card{
         height: 278px;

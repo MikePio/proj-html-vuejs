@@ -26,7 +26,15 @@ export default {
             <li>Contact</li>
           </ul>
         </nav>
-        <div class="empty-div"></div>
+        <!-- <div class="empty-div"></div> -->
+        <nav>
+          <ul class="nav-list social-icons d-flex ">
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-linkedin-in"></i></li>
+            <li><i class="fa-brands fa-facebook-f"></i></li>
+            <li><i class="fa-brands fa-twitter"></i></li>
+          </ul>
+        </nav>
       </div>
 
       <div class="terms-of-use d-flex justify-content-between align-items-center">
@@ -55,7 +63,7 @@ footer{
     margin: 0 2.30%;
     position: relative;
     .nav-row{
-      width: calc(100% - 2.30% - 2.30%);
+      // width: calc(100% - 2.30% - 2.30%);
 
     }
 
@@ -85,10 +93,23 @@ footer{
         font-family: 'Montserrat', sans-serif;
         color: #aaa;
         font-weight: 400;
+        &:last-child{
+          margin-right: 0;
+        }
         &:hover{
           cursor: pointer;
           color: $secondary-color;
         }
+      }
+
+    }
+    .social-icons li i{
+      color: #fff;
+      font-size: 20px;
+
+      &:hover{
+        cursor: pointer;
+        color: $secondary-color;
       }
     }
   }

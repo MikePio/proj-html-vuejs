@@ -20,7 +20,8 @@ export default {
   <div class="big-container-cards-blog d-flex justify-content-between">
     <!-- cards -->
     <div class="card-blog">
-      <img src="public/images/startup-business-people-and-strategy-board-PAJ3P9K-1390x1042.jpg" alt="img-card">
+      <!-- <img src="public/images/startup-business-people-and-strategy-board-PAJ3P9K-1390x1042.jpg" alt="img-card"> -->
+      <div class="img-background-left"></div>
       <div class="container-card-blog d-flex justify-content-center align-items-center">
         <div class="little-container-card-blog d-flex flex-column justify-content-around align-items-start">
           <div class="d-flex ">
@@ -34,7 +35,8 @@ export default {
     </div>
 
     <div class="card-blog">
-      <img src="public/images/business-people-working-together-on-project-and-5FHSKBL-1390.jpg" alt="img-card">
+      <!-- <img src="public/images/business-people-working-together-on-project-and-5FHSKBL-1390.jpg" alt="img-card"> -->
+      <div class="img-background-right"></div>
       <div class="container-card-blog d-flex justify-content-center align-items-center">
         <div class="little-container-card-blog d-flex flex-column justify-content-around align-items-start">
           <div class="d-flex ">
@@ -111,9 +113,45 @@ export default {
 
     .card-blog{
       position: relative;
-      img{
+
+      transition: all 0.3s ease-out;
+      &:hover{
+        // img{
+          .img-background-left, .img-background-right{
+          background-size: 105% ;
+          transition: all 0.3s ease-out;
+
+        }
+        .container-card-blog{
+          background-color: $light-green;
+          bottom: -110px;
+            
+        }
+        
+      }
+
+      .img-background-left{
+        background-image: url('public/images/startup-business-people-and-strategy-board-PAJ3P9K-1390x1042.jpg');
+        background-size: 100%;
         width: 726px;
         height: 544px;
+      }
+      .img-background-right{
+        background-image: url('public/images/business-people-working-together-on-project-and-5FHSKBL-1390.jpg');
+        background-size: 100%;
+        width: 726px;
+        height: 544px;
+      } 
+
+      img{
+        // width: 726px;
+        // height: 544px;
+        // transition: all 0.3s ease-out;
+        // &:hover{
+        //   transform: scale(1.03)
+
+          
+        // }
       }
       
       .container-card-blog{
@@ -125,10 +163,12 @@ export default {
         bottom: -100px;
         z-index: 2;
         text-align: left;
-        &:hover{
-          background-color: $light-green;
+        transition: all 0.3s ease-out;
+        // &:hover{
+        //   background-color: $light-green;
+        //   bottom: -110px;
           
-        }
+        // }
         .little-container-card-blog{
           height: 215px;
         }
