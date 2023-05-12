@@ -61,7 +61,8 @@ export default {
 @use '../../../scss/main.scss' as *;
 
 .testimonial-section{
-  height: 980px;
+  // height: 980px;
+  margin-bottom: 266px;
   max-width: 1519px;
 
 
