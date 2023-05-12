@@ -56,7 +56,8 @@ export default {
 @use '../../../scss/main.scss' as *;
 
 .blog-section{
-  height: 1090px;
+  // height: 1090px;
+  margin-bottom: 337px;
   h3.title-section{
     font-family: bai jamjuree,Sans-serif;
     font-size: 45px;
