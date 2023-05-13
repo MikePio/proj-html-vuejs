@@ -1,9 +1,15 @@
 <script>
+import ConsultationSectionCards from '.././ConsultationSectionCards.vue'
+import { consultationCards } from "../../../data/consultation-cards"
+
 export default {
   name: 'ConsultationSection',
+  components:{
+    ConsultationSectionCards
+  },
   data(){
     return{
-
+      consultationCards
     }
   }
 
@@ -15,7 +21,9 @@ export default {
     <div class="container-consultation-section">
       <h6>Our consultants can help you</h6>
       <div class="container-cards d-flex flex-wrap">
-        <div class="card-mp d-flex justify-content-center">
+        <!-- //* CARDS STATICHE -->
+        <!-- 
+          <div class="card-mp d-flex justify-content-center">
           <div class="container-img-card d-flex align-items-center justify-content-center">
             <img class="img-card" src="public/img-extra/line-graph.svg" alt="img-card">
           </div>
@@ -35,7 +43,7 @@ export default {
         </div>
         <div class="card-mp d-flex justify-content-center">
           <div class="container-img-card d-flex align-items-center justify-content-center">
-            <img class="img-card" src="public\img-extra\Path-13.svg" alt="img-card">
+            <img class="img-card" src="public/img-extra/Path-13.svg" alt="img-card">
           </div>
           <div class="description-card">
             <h3>BANKING CONSULTING</h3>
@@ -44,13 +52,24 @@ export default {
         </div>
         <div class="card-mp d-flex justify-content-center">
           <div class="container-img-card d-flex align-items-center justify-content-center">
-            <img class="img-card" src="public\img-extra\target.svg" alt="img-card">
+            <img class="img-card" src="public/img-extra/target.svg" alt="img-card">
           </div>
           <div class="description-card">
             <h3>ENTERPRISE CONSULTING</h3>
             <p>When, while lovely valley teems with vapour around meand eridian sun strikes the upper impenetrable foliage of my trees, and but a</p>
           </div>
-        </div>
+        </div> 
+        -->
+        <!-- //* CARDS DINAMICHE CON PROPS -->
+        <ConsultationSectionCards
+          v-for="(consultationCard, index) in consultationCards" 
+          :key="index"
+          :imagePath="consultationCard.img"
+          :title=" consultationCard.title" 
+          :description=" consultationCard.description" 
+        />
+
+
       </div>
 
     </div>
@@ -63,7 +82,7 @@ export default {
 
 .consultation-section{
   // min-height: 895px;
-  height: 895px;
+  // height: 895px;
   color: $primary-color;
 
   .container-consultation-section{

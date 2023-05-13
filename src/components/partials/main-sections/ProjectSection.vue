@@ -7,11 +7,14 @@
 
   import 'swiper/css/pagination';
 
+  // per la navigazione tramite buttons
+  import 'swiper/css/navigation';
+
   // import './style.css';
 
   // import required modules
-  // import { Navigation } from 'swiper';
-  import { useSwiper } from 'swiper/vue';
+  import { Navigation } from 'swiper';
+  // import { useSwiper } from 'swiper/vue';
 
 export default {
   name: 'ProjectSection',
@@ -29,14 +32,14 @@ export default {
     }
   },
   setup(){
-    const swiper = useSwiper();
+    // const swiper = useSwiper();
     return {
-      // modules: [ Navigation],
-      swiper,
+      modules: [ Navigation],
+      // swiper,
     };
   },
   methods: {
-
+    
 
   },
   mounted() {
@@ -53,8 +56,8 @@ export default {
     <div class="container-mp d-flex justify-content-between">
       <h3 class="title-section">OUR EXPERT TRUSTED CONSULTANTS HELP CLIENTS</h3>
       <div class="container-buttons d-flex justify-content-center">
-        <div class="arrow-left d-flex align-items-center justify-content-center  "  @click="swiper.slidePrev()" ><span>&#x2190;</span></div>
-        <div class="arrow-right d-flex align-items-center justify-content-center "  @click="swiper.slideNext()"><span>&#x2192;</span></div>
+        <div class="arrow-left d-flex align-items-center justify-content-center   " ><span>&#x2190;</span></div>
+        <div class="arrow-right d-flex align-items-center justify-content-center  "><span>&#x2192;</span></div>
       </div>
     </div>
 
@@ -64,8 +67,8 @@ export default {
       <swiper
         :slidesPerView="3"
         :spaceBetween="30"
+        :navigation="true"
         :modules="modules"
-        :navigation="false"
         class="mySwiper"
       >
         <swiper-slide><img src="public\images\DRY-1-790x592.jpg" alt="img-slider"></swiper-slide>
@@ -80,6 +83,7 @@ export default {
       </swiper>
 
     </div>
+
 
   </section>
 
@@ -141,9 +145,13 @@ export default {
         background-color: rgba(255,255,255,.1);
       }
     }
-    .arrow-left span, .arrow-right {
+    .arrow-left, .arrow-right {
       // font-size: 18px;
       // height: 20px;
+      &:hover{
+        background-color: $light-green;
+        cursor: pointer;
+      }
     }
     .arrow-left{
       margin-right: 8px;
@@ -174,11 +182,6 @@ export default {
 
 
 }
-
-
-
-
-
 
 
 

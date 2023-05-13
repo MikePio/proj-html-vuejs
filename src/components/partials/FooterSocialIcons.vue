@@ -17,8 +17,6 @@ export default {
 
 <template>
   <li><a :href="linkSocial"><i :class="nameIcon"></i></a></li>
-  <!-- <li><i :class="nameIcon"><a :href="linkSocial"></a></i></li>
-  <li><i :class="nameIcon"></i></li> -->
 </template>
 
 <style lang="scss" scoped>
